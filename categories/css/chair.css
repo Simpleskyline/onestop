@@ -1,0 +1,128 @@
+:root{
+    --bg-color: #F9F3EA;
+    --secondary-color: #FFFDFB;
+    --text-color: #EEEEE;
+
+    --card-height: 400px;
+    --card-width: 100%;
+    --card-radius: 16px;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: #FFFDFB;
+    font-family: 'Inter', 'Kumbh sans', sans-serif;
+    padding: 3rem;
+    min-height: 100vh;
+}
+
+.nav_container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--secondary-color);
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    height: 65px;
+    border-radius: 5px;
+    padding: 2rem;
+}
+
+.nav_items{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 1.5rem;
+}
+
+.nav_items h2{
+    margin: 20px 0px 0px 20px;
+    color: var(--text-color);
+    font-size: 2.5rem;
+    font-weight: bold;
+    max-width: 400px;
+    line-height: 1.2;
+    z-index: 1; 
+}
+
+.nav_items form{
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid;
+    margin-left: auto;
+    height: 36px;
+    overflow: hidden; 
+    border-radius: var(--card-radius);
+    padding: 0.5em;
+}
+
+.nav_items form input[type="text"]{
+    border: none;
+    outline: none;
+    padding: 0.5em 1em;
+}
+
+.nav_items form button{
+    border: none;
+    background: var(--secondary-color);
+    color: var(text-color);
+    cursor: pointer;
+    padding: 0.5em 1em;
+}
+
+.nav_items img{
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
+}
+
+.chair-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    width: 100%;
+    max-width: 1200px;
+    gap: 2.5rem;
+    
+}
+
+.chair-card{
+    width: 500px;
+    height: 500px;
+    background-color: var(--bg-color);
+    border-radius: 24px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+.chair-card img{
+    display: block;
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 24px 24px 0px 0px;
+}
+
+.chair-card h3{
+    font-size: 1.5rem;
+    font-weight: 5px;
+    padding: 5px;
+}
+
+.chair-card p{
+    font-size: 1rem;
+    padding: 5px;
+}
+
+.chair-card button{
+   width: 100px;
+   border: 1px solid;
+   height: 55px;
+   border-radius: var(--card-radius);
+   background-color: #E17C50;
+   color: #FFFF;
+   margin-top: auto;
+}

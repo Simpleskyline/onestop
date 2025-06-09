@@ -1,27 +1,59 @@
-<html>
-    <head>
-        <title>OneStop</title>
-        <link rel="stylesheet" href="sytle,css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>OneStop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
     <body>
         <nav class="navbar">
             <div class="nav_container">
-                <h2 class class="nav_title">Furniture Store</h2>
-                <div class="nav_menu">
-                    <ul>
-                        <li>
-                            <form action="/search">
-                                <input type="text" name="query" placeholder="Search...">
-                                <button type="submit">Search</button>
-                            </form>
-                        </li>
-                        <li>
-                            <i class="fas fa-cart-shopping"></i>
-                        </li>
-                    </ul>
+                <div class="nav_items">
+
+                    <h2 class="nav_title">Furniture Store</h2>
+                    <form action="/search">
+                        <input type="text" name="query" placeholder="Search furniture...">
+                        <button type="submit">Search</button>
+                    </form>
+                    <a href="/cart.html"><img src="Images/cart.png" alt></a>
+                    </div>
                 </div>
-            </div>
-        <nav>
+
+            </nav>
+
+            <div class="main">
+                <div class="img_card">
+                    <h1>Shop <br>Furniture</h1>
+                    <img src="/Images/homeShopFurniture.jpg" alt="Shop Now">
+                </div>
+
+            <section class="category_card">
+                    <h1>Shop by Category</h1>
+                    <div class="category">
+                        <div class="img_container">
+                            <a href="/categories/html/chair.html"><img src="/Images/chair.svg" alt="chair"></a>
+                            <p>Chairs</p>
+                        </div>
+
+                        <div class="img_container">
+                            <a href="/categories/html/sofa.html"> <img src="/Images/sofa.svg" alt="sofa"></a>
+                            <p>Sofa</p>
+                        </div>
+
+                        <div class="img_container"i>
+                            <a href="/categories/html/table.html"><img src="/Images/table.svg" alt="table"></a>
+                            <p>Table</p>
+                        </div>
+
+                        <div class="img_container">
+                            <a href="/categories/html/bed.html"><img src="/Images/bed.svg" alt="bed"></a>
+                            <p>Bed</p>
+                        </div>
+
+                    </div>
+                </section>
+        </div>
     </body>
 </html>
