@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="/categories/css/chair.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     </head>
+
     <body>
         <nav class="navbar">
             <div class="nav_container">
@@ -25,31 +26,56 @@
                     <img src="/Images/livingroom.jpg" alt="">
                     <h3>Living Room Table</h3>
                     <p>$1500</p>
-                    <button type="submit">Add to cart</button> 
+                    <button class="add-to-cart-btn" data-name="Living Room Table" data-price="$1500">Add to cart</button>
                 </section>
            
                  <section class="chair-card">
                     <img src="/Images/twoperson.jpg" alt="cart">
                     <h3>Two Person Dinnertable</h3>
                     <p>$2500</p>
-                    <button type="submit">Add to cart</button> 
+                    <button class="add-to-cart-btn" data-name="Two Person Dinnertable" data-price="$2500">Add to cart</button>
                 </section>
 
                  <section class="chair-card">
                     <img src="/Images/stool.jpg" alt="cart">
                     <h3>Stool</h3>
                     <p>$160</p>
-                    <button type="submit">Add to cart</button> 
+                    <button class="add-to-cart-btn" data-name="Stool" data-price="$160">Add to cart</button> 
                 </section>
 
                 <section class="chair-card">
                     <img src="/Images/floating.jpg" alt="cart">
                     <h3>Floating Table</h3>
                     <p>$20000</p>
-                    <button type="submit">Add to cart</button> 
+                    <button class="add-to-cart-btn" data-name="Floating Table" data-price="$20000">Add to cart</button> 
                 </section>
 
             </section>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".add-to-cart-btn");
+
+    buttons.forEach(button => {
+      button.addEventListener("click", function () {
+        const name = this.dataset.name;
+        const price = parseFloat(this.dataset.price);
+
+        // Get existing cart or start new
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        // Add item to cart
+        cart.push({ name, price, quantity: 1 });
+
+        // Save updated cart
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        // Notify user
+        alert(`${name} added to cart!`);
+      });
+    });
+  });
+</script>
+
 
     </body>
 </html>
